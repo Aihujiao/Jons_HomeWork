@@ -5,6 +5,8 @@ import model.Department;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class departmentCtrl extends ExecuteDB {
     //  添加部门
@@ -48,13 +50,38 @@ public class departmentCtrl extends ExecuteDB {
                 String departmentName = rs.getString("departmentName");
                 String departmentIntro = rs.getString("departmentIntro");
                 department = new Department(departmentId, departmentAdminId, departmentName, departmentIntro);
-            }else{
 
+                return department;
+            }else{
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //  查询所有部门信息
+    //  超级管理员
+    private List<Department> showAllDepartment(){
+        List<Department> list =new ArrayList();
+        Department department = new Department();
+        String sql = "select * from departments";
+
+        ResultSet rs = executeDBQuery(sql, null);
+
+        try {
+            if(rs.next()){
+                int departmentId = rs.getInt("departmentId");
+                int departmentAdminId = rs.getInt("departmentAdminId");
+                String departmentName = rs.getString("departmentName");
+                String departmentIntro = rs.getString("departmentIntro");
+                department = new Department(departmentId,departmentAdminId,departmentName,departmentIntro);
+                list.add(department);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return department;
+        return list;
     }
 }
