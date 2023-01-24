@@ -6,6 +6,16 @@ public class Department {
     private String departmentName;
     private String departmentIntro;
 
+    public Department() {
+    }
+
+    public Department(int departmentId, int departmentAdminId, String departmentName, String departmentIntro) {
+        this.departmentId = departmentId;
+        this.departmentAdminId = departmentAdminId;
+        this.departmentName = departmentName;
+        this.departmentIntro = departmentIntro;
+    }
+
     public int getDepartmentId() {
         return departmentId;
     }

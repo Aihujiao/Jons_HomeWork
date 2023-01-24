@@ -38,6 +38,7 @@ public class adminCtrl extends ExecuteDB {
         }
     }
 
+
     //  修改管理员信息
     private boolean updateInfo(Admin admin){
         String adminNickName = admin.getAdminNickName();
@@ -64,6 +65,22 @@ public class adminCtrl extends ExecuteDB {
         return deleted;
     }
 
+    //  添加本部员工
+    private boolean addEmployeeOnDepartment(Employee employee){
+        String sql = "insert into employees value (null,?,?,?,?,?,?,?)";
+        String employeeName = employee.getEmployeeName();
+        String employeePassword = employee.getEmployeePassword();
+        int employeeGender = employee.getEmployeeGender();
+        int employeeAge = employee.getEmployeeAge();
+        String employeeProfile = employee.getEmployeeProfile();
+        int employeeDepartmentId = employee.getDepartmentId();
+
+        Object objects[] = {employeeName,employeePassword,employeeGender,employeeAge,employeeProfile,employeeDepartmentId};
+        boolean added = executeDBUpdate(sql, objects);
+
+        return added;
+    }
+
     //  查询本部门员工
     private List<Employee> showEmployees(int departmentId){
         String sql = "select * from employees where departmentId = ?";
@@ -80,7 +97,7 @@ public class adminCtrl extends ExecuteDB {
                 int employeeGender = rs.getInt("employeeGender");
                 int employeeAge = rs.getInt("employeeAge");
                 String employeeProfile = rs.getString("employeeProfile");
-                int employeeDepartment = rs.getInt("employeeDepartment");
+                int employeeDepartmentId = rs.getInt("employeeDepartmentId");
                 String employeePosition = rs.getString("employeePosition");
                 int employeeStation = rs.getInt("employeeStation");
 
@@ -92,6 +109,28 @@ public class adminCtrl extends ExecuteDB {
         }
         return list;
     }
+
+    //  修改单个本部员工信息
+    private boolean updateEmployee(Employee employee){
+        String sql = "update employees set employeeName = ?,employeePassword = ?,employeeGender = ?,employeeAge =?,employeeProfile= ?,employeeDepartmentId = ?,employeePosition = ?,employeeStation = ? where employeeId = ?";
+        String employeeName = employee.getEmployeeName();
+        String employeePassword = employee.getEmployeePassword();
+        int employeeGender = employee.getEmployeeGender();
+        int employeeAge = employee.getEmployeeAge();
+        String employeeProfile = employee.getEmployeeProfile();
+        int employeeDepartmentId = employee.getDepartmentId();
+        String employeePosition = employee.getEmployeePosition();
+        int employeeStation = employee.getEmployeeStation();
+
+        Object objects[] = {employeeName,employeePassword,employeeGender,employeeAge,employeeProfile,employeeDepartmentId,employeePosition,employeeStation};
+
+        boolean updated = executeDBUpdate(sql, objects);
+
+        return updated;
+    }
+
+    //  修改多个
+
 
     //  超级管理员修改信息功能？？
 }

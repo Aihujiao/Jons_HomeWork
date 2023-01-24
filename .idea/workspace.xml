@@ -9,25 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53a1682-5c72-44ee-b18a-b74ba903ba71" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Jons_HomeWork_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jons_HomeWork.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/DBUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/ExecuteDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+    <list default="true" id="d53a1682-5c72-44ee-b18a-b74ba903ba71" name="变更" comment="230124">
+      <change afterPath="$PROJECT_DIR$/src/ctrl/departmentCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Department.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +28,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -191,7 +183,16 @@
       <workItem from="1673970947387" duration="68000" />
       <workItem from="1673971024465" duration="208000" />
       <workItem from="1674390211177" duration="6898000" />
+      <workItem from="1674539766985" duration="7036000" />
     </task>
+    <task id="LOCAL-00001" summary="230124">
+      <created>1674539864278</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674539864278</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +211,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="230124" />
+    <option name="LAST_COMMIT_MESSAGE" value="230124" />
   </component>
 </project>
