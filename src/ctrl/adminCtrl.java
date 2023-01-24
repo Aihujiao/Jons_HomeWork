@@ -101,7 +101,7 @@ public class adminCtrl extends ExecuteDB {
                 String employeePosition = rs.getString("employeePosition");
                 int employeeStation = rs.getInt("employeeStation");
 
-                Employee employee = new Employee(employeeId, employeePassword, employeeName, employeeGender, employeeAge, employeeProfile, departmentId, employeePosition, employeeStation);
+                Employee employee = new Employee(employeeId, employeePassword, employeeName, employeeGender, employeeAge, employeeProfile, employeeDepartmentId, employeePosition, employeeStation);
                 list.add(employee);
             }
         }catch (SQLException e){
@@ -130,7 +130,34 @@ public class adminCtrl extends ExecuteDB {
     }
 
     //  修改多个
-
-
     //  超级管理员修改信息功能？？
+
+
+    //  查询所有员工信息
+    private List<Employee> getAllEmployees(){
+        List<Employee> list = new ArrayList<>();
+        String sql = "select * from employees";
+
+        ResultSet rs = executeDBQuery(sql,null);
+        try {
+            while(rs.next()){
+                int employeeId = rs.getInt("employeeId");
+                String employeeName = rs.getString("employeeName");
+                String employeePassword = rs.getString("employeePassword");
+                int employeeGender = rs.getInt("employeeGender");
+                int employeeAge = rs.getInt("employeeAge");
+                String employeeProfile = rs.getString("employeeProfile");
+                int employeeDepartmentId = rs.getInt("employeeDepartmentId");
+                String employeePosition = rs.getString("employeePosition");
+                int employeeStation = rs.getInt("employeeStation");
+                Employee employee = new Employee(employeeId, employeePassword, employeeName, employeeGender, employeeAge, employeeProfile, employeeDepartmentId, employeePosition, employeeStation);
+                list.add(employee);
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return list;
+    }
 }

@@ -4,6 +4,11 @@ import db.ExecuteDB;
 import model.Department;
 import model.Employee;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class employeeCtrl extends ExecuteDB{
     //  为部门添加员工
     private boolean addEmployee(Employee employee){
@@ -42,9 +47,30 @@ public class employeeCtrl extends ExecuteDB{
         return updated;
     }
 
-    //  查询员工信息
+    //  查询某位员工信息
     private Employee getEmployeeInfor(int employeeId){
-        Employee employee = new Employee();
+        Employee employee = null;
+        String sql = "select * from employees where employeeId = ?";
+        Object objects[] = {employeeId};
+
+        ResultSet rs = executeDBQuery(sql, objects);
+
+        try {
+            if(rs.next()){
+                String employeeName = rs.getString("employeeName");
+                String employeePassword = rs.getString("employeePassword");
+                int employeeGender = rs.getInt("employeeGender");
+                int employeeAge = rs.getInt("employeeAge");
+                String employeeProfile = rs.getString("employeeProfile");
+                int employeeDepartmentId = rs.getInt("employeeDepartmentId");
+                String employeePosition = rs.getString("employeePosition");
+                int employeeStation = rs.getInt("employeeStation");
+                employee = new Employee(employeeId,employeeName,employeePassword,employeeGender,employeeAge,employeeProfile,employeeDepartmentId,employeePosition,employeeStation);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
         return employee;
     }
 }
