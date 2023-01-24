@@ -11,6 +11,9 @@ public class Employee {
     private String employeePosition;
     private int employeeStation;
 
+    public Employee() {
+    }
+
     public Employee(int employeeId, String employeePassword, String employeeName, int employeeGender, int employeeAge, String employeeProfile, int departmentId, String employeePosition, int employeeStation) {
         this.employeeId = employeeId;
         this.employeePassword = employeePassword;
