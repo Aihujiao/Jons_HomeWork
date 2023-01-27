@@ -8,6 +8,9 @@ public class Admin {
     private int adminDepartmentId;
     private int adminStation;
 
+    public Admin() {
+    }
+
     public Admin(int adminId, String adminPassword, String adminNickName, String adminProfile, int adminDepartmentId, int adminStation) {
         this.adminId = adminId;
         this.adminPassword = adminPassword;
