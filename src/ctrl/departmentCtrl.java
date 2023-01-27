@@ -1,5 +1,6 @@
 package ctrl;
 
+import ctrl.dao.departmentDao;
 import db.ExecuteDB;
 import model.Department;
 
@@ -8,9 +9,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class departmentCtrl extends ExecuteDB {
+public class departmentCtrl extends ExecuteDB implements departmentDao {
     //  添加部门
-    private boolean addDepartment (Department department){
+    public boolean registDepartment(Department department){
         String sql = "insert into departments value (null,?,?,?)";
         int departmentAdminId = department.getDepartmentAdminId();
         String departmentName = department.getDepartmentName();
@@ -23,7 +24,7 @@ public class departmentCtrl extends ExecuteDB {
     }
 
     //  修改部门信息
-    private boolean updateDepartment(Department department){
+    public boolean updateDepartment(Department department){
         String sql = "update departments set departmentAdminId = ?,departmentName =?,departmentIntro = ? where departmentId = ?";
         int departmentId = department.getDepartmentId();
         int departmentAdminId = department.getDepartmentAdminId();
@@ -37,7 +38,7 @@ public class departmentCtrl extends ExecuteDB {
     }
 
     //  查询部门信息
-    private Department getDepartmentInforById(int departmentId){
+    public Department getDepartmentById(int departmentId){
         Department department = new Department();
         String sql = "select * from departments where departmentId = ?";
 
@@ -61,7 +62,7 @@ public class departmentCtrl extends ExecuteDB {
     }
 
     //  查询所有部门信息
-    private List<Department> showAllDepartment(){
+    public List<Department> getAllDepartment(){
         List<Department> list =new ArrayList();
         Department department = new Department();
         String sql = "select * from departments";
@@ -86,7 +87,7 @@ public class departmentCtrl extends ExecuteDB {
 
     //  超级管理员
     //  删除部门信息
-    private boolean deleteDepartment(int departmentId){
+    public boolean deleteDepartment(int departmentId){
         boolean isEmpty = false;
         boolean deleted =false;
         String sql = "select * from employees where employeeDepartmentId = ?";
