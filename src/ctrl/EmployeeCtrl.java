@@ -1,15 +1,13 @@
 package ctrl;
 
+import ctrl.dao.EmployeeDao;
 import db.ExecuteDB;
-import model.Department;
 import model.Employee;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class employeeCtrl extends ExecuteDB{
+public class EmployeeCtrl extends ExecuteDB implements EmployeeDao {
     //  为部门添加员工
     private boolean addEmployee(Employee employee){
         String sql = "insert into employees value(null,?,?,?,?,?,?,?,?)";

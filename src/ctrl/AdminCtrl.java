@@ -1,6 +1,6 @@
 package ctrl;
 
-import ctrl.dao.adminDao;
+import ctrl.dao.AdminDao;
 import db.ExecuteDB;
 import model.Admin;
 import model.Employee;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class adminCtrl extends ExecuteDB implements adminDao {
+public class AdminCtrl extends ExecuteDB implements AdminDao {
     //  登录方法
     public Admin loginAdmin(Admin admin){
         //  读取前端登录页面的信息

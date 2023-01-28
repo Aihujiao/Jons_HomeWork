@@ -5,7 +5,7 @@ import model.Employee;
 
 import java.util.List;
 
-public interface adminDao {
+public interface AdminDao {
     public Admin loginAdmin(Admin admin);
 
     //  超级管理员特殊功能选项

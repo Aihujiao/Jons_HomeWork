@@ -9,12 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d53a1682-5c72-44ee-b18a-b74ba903ba71" name="变更" comment="2301270819">
-      <change afterPath="$PROJECT_DIR$/src/ctrl/dao/employeeDao.java" afterDir="false" />
+    <list default="true" id="d53a1682-5c72-44ee-b18a-b74ba903ba71" name="变更" comment="2301270955">
+      <change afterPath="$PROJECT_DIR$/src/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factory/AdminFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factory/DepartmentFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factory/EmployeeFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ctrl/dao/adminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/dao/adminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/adminCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/AdminCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/dao/adminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/dao/departmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/dao/DepartmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/dao/employeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/dao/EmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/departmentCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/DepartmentCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ctrl/employeeCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ctrl/EmployeeCtrl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,27 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ideaW/myProject/Jons_HomeWork/web/WEB-INF/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/ideaW/myProject/Jons_HomeWork/web/WEB-INF/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaW\myProject\Jons_HomeWork\web\WEB-INF\lib" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="factory" />
     </key>
   </component>
   <component name="RunManager">
@@ -187,7 +198,8 @@
       <workItem from="1674390211177" duration="6898000" />
       <workItem from="1674539766985" duration="18016000" />
       <workItem from="1674710979162" duration="3080000" />
-      <workItem from="1674777650425" duration="6763000" />
+      <workItem from="1674777650425" duration="8058000" />
+      <workItem from="1674875371626" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="230124">
       <created>1674539864278</created>
@@ -245,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674778805976</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2301270955">
+      <created>1674784562962</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674784562962</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +286,7 @@
     <MESSAGE value="230124" />
     <MESSAGE value="2301242224" />
     <MESSAGE value="2301270819" />
-    <option name="LAST_COMMIT_MESSAGE" value="2301270819" />
+    <MESSAGE value="2301270955" />
+    <option name="LAST_COMMIT_MESSAGE" value="2301270955" />
   </component>
 </project>

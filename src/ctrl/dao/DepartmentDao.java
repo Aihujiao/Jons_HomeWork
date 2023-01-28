@@ -4,7 +4,7 @@ import model.Department;
 
 import java.util.List;
 
-public interface departmentDao {
+public interface DepartmentDao {
 
     public boolean registDepartment(Department department);
 
